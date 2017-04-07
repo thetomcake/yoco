@@ -1,0 +1,18 @@
+.content-container {
+    position: relative;
+    left: 0px;
+    transition: all 0.3s;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+    
+    &.slide-out-left, &.slide-out-right {
+        opacity: 0;
+    }
+    
+    &.slide-out-left {
+        left: -100%;
+    }
+    &.slide-out-right {
+        left: 100%;
+    }
+}

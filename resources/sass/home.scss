@@ -1,0 +1,17 @@
+@import "master.scss";
+@import "skills/skills.scss";
+
+.grid-item a.button {
+    margin-bottom: 0;
+    float: right;
+}
+@media screen and (min-width: 768px) {
+    .grid-item a.button {
+        margin-top: -37px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .grid-item a.button {
+        margin-top: 10px;
+    }
+}

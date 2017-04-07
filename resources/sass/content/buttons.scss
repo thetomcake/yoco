@@ -1,0 +1,26 @@
+button, a.button {
+    background-color: #666;
+    border: solid 1px #333;
+    color: #fff;
+    
+    &.button-primary {
+        background-color: #E04856;
+        border: solid 2px #333;
+        color: #333;
+        &:hover, &:focus {
+            color: #000;
+            font-weight: bold;
+            border: solid 2px #333;
+            background-color: darken(#E04856, 5%);
+        }
+    }
+    
+    &:hover, &:focus {
+        text-decoration: none;
+        color: #fff;
+        border: solid 1px #333;
+        background-color: #444;
+    }
+    
+}
+

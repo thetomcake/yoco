@@ -1,0 +1,182 @@
+.grid-item, .grid-sizer {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    .grid-item {
+        &.grid-item--width2 {
+            img.header-image {
+                width: 85%;
+                margin-left: 7.5%;
+                -moz-transition: -moz-transform,-webkit-transform,transform 1.2s;
+                -webkit-transition: -moz-transform,-webkit-transform,transform 1.2s;
+                transition: -moz-transform,-webkit-transform,transform 1.2s;
+
+                &:hover {
+                    -moz-transform: scale(1.1);
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+
+            }
+
+            p {
+                margin: 15px 0 0 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: px;
+            }
+
+            .grid-item-header h2 {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}
+
+ @media screen and (min-width: 768px) {
+     .grid-item {
+         
+        &.grid-item--width2 {
+            width: 100%;
+
+            img.header-image, object.header-image {
+                width: 50%;
+                margin-top: -38px;
+                float: left;
+                
+                                
+                
+                
+            }
+
+            p, h2 {
+                box-sizing: border-box;
+                padding-left: 15px;
+            }
+
+            p {
+                float: right;
+                width: 50%;
+                margin: 15px 0 0 0;
+            }
+
+            .grid-item-header h2 {
+                margin: 0 0 15px 50%;
+            }
+        }
+        &.grid-item--header {
+            width: 100%;
+
+            img.header-image, object.header-image {
+                width: 20%;
+                height: 250px;
+                margin-top: -38px;
+                float: left;
+                
+            }
+
+            p, h2 {
+                box-sizing: border-box;
+                padding-left: 15px;
+            }
+
+            p {
+                float: right;
+                width: 80%;
+                margin: 15px 0 0 0;
+            }
+
+            .grid-item-header h2 {
+                margin: 0 0 15px 20%;
+            }
+        }
+    }
+}
+
+.grid-item {
+    padding: 15px;
+    box-shadow: 3px 3px 4px #000;
+    margin-bottom: 10px;
+    
+    .grid-item-header-url {
+        float: right;
+    }
+        
+    .grid-item-header {
+        h2 {
+            font-size: 16pt;
+        }
+        .grid-item-header-url {
+            font-size: 10pt;
+        }
+    }
+    
+    .zoom-toggle {
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+    }
+    
+    &.grid-item--width1 {
+        img.header-image {
+            -moz-transition: -moz-transform,-webkit-transform,transform 1.2s;
+            -webkit-transition: -moz-transform,-webkit-transform,transform 1.2s;
+            transition: -moz-transform,-webkit-transform,transform 1.2s;
+
+            &:hover {
+                -moz-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+
+        }
+    }
+       
+    &.grid-item--width1 {
+        img.header-image, object.header-image {
+            width: 85%;
+            margin-left: 7.5%;
+        }
+        p {
+            margin: 15px 0 0 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-height: px;
+        }
+
+        .grid-item-header h2 {
+            margin: 0 0 15px 0;
+        }
+    }
+    
+}
+
+/* XS Phone */
+@media screen and (max-width: 767px) {
+    .grid-item, .grid-sizer {
+        width: 100%;
+    }
+    .gutter-sizer {
+        width: 0%;
+    }
+}
+
+/* Tablet & Desktop */
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+    .grid-item, .grid-sizer {
+        width: 49%;
+    }
+    .gutter-sizer {
+        width: 2%;
+    }
+}
+
+/* XL Large Desktop */
+@media screen and (min-width: 1280px) {
+    .grid-item, .grid-sizer {
+        width: 32.66%;
+    }
+    .gutter-sizer {
+        width: 1%;
+    }
+}

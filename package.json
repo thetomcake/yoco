@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-bower": "*",
+    "gulp-sass": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "vue": "^2.0.1",
+    "vue-resource": "^1.0.3"
+  }
+}

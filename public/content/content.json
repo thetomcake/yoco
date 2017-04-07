@@ -1,0 +1,165 @@
+{
+    "items": [
+        {
+            "title": "Docker",
+            "url": "https://www.docker.com",
+            "width": 1,
+            "image": "/assets/images/docker.png",
+            "content": "Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and Linux.\n\nDocker uses the resource isolation features of the Linux kernel such as cgroups and kernel namespaces, and a union-capable file system such as OverlayFS and others to allow independent \"containers\" to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines."
+        },
+        {
+            "title": "PHP",
+            "url": "https://php.net",
+            "width": 1,
+            "image": "/assets/images/php.png",
+            "content": "PHP is a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.\n\nOriginally created by Rasmus Lerdorf in 1994, the PHP reference implementation is now produced by The PHP Development Team. PHP originally stood for Personal Home Page, but it now stands for the recursive acronym PHP: Hypertext Preprocessor."
+        },
+        {
+            "title": "PostgreSQL",
+            "url": "https://www.postgresql.org",
+            "width": 1,
+            "image": "/assets/images/postgresql.png",
+            "content": "PostgreSQL, often simply Postgres, is an object-relational database (ORDBMS) – i.e. an RDBMS, with additional (optional use) \"object\" features – with an emphasis on extensibility and standards compliance.\n\nAs a database server, its primary functions are to store data securely and return that data in response to requests from other software applications. It can handle workloads ranging from small single-machine applications to large Internet-facing applications (or for data warehousing) with many concurrent users; on macOS Server, PostgreSQL is the default database; and it is also available for Microsoft Windows and Linux (supplied in most distributions)."
+        },
+        {
+            "title": "Laravel",
+            "url": "https://laravel.com",
+            "width": 1,
+            "image": "/assets/images/laravel.png",
+            "content": "Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern.\n\nSome of the features of Laravel are a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation toward syntactic sugar."
+        },
+        {
+            "title": "Ubuntu",
+            "url": "https://www.ubuntu.com",
+            "width": 1,
+            "image": "/assets/images/ubuntu.png",
+            "content": "Ubuntu is a Debian-based Linux operating system for personal computers, tablets and smartphones, where Ubuntu Touch edition is used; and also runs network servers, usually with the Ubuntu Server edition, either on physical or virtual servers (such as on mainframes) or with containers, that is with enterprise-class features; runs on the most popular architectures, including server-class ARM-based."
+        },
+        {
+            "title": "jQuery",
+            "url": "https://jquery.com",
+            "width": 1,
+            "image": "/assets/images/jquery.png",
+            "content": "jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. It is free, open-source software using the permissive MIT license.\n\nWeb analysis indicates that it is the most widely deployed JavaScript library by a large margin."
+        },
+        {
+            "title": "Vue.js",
+            "url": "https://vuejs.org",
+            "width": 1,
+            "image": "/assets/images/vue.png",
+            "content": "Vue.js is an open-source progressive JavaScript framework for building user interfaces. Integration into projects that use other JavaScript libraries is made easy with Vue because it is designed to be incrementally adoptable.\n\nAlso, Vue is a capable web application framework that is able to power advanced single-page applications."
+        },
+        {
+            "title": "Jenkins",
+            "url": "https://jenkins.io",
+            "width": 1,
+            "image": "/assets/images/jenkins.png",
+            "content": "Jenkins is an open source automation server written in Java. The project was forked from Hudson after a dispute with Oracle.\n\nJenkins helps to automate the non-human part of the whole software development process, with now common things like continuous integration, but by further empowering teams to implement the technical part of a Continuous Delivery.\n\nIt is a server-based system running in a servlet container such as Apache Tomcat. It supports SCM tools including AccuRev, CVS, Subversion, Git, Mercurial, Perforce, Clearcase and RTC, and can execute Apache Ant, Apache Maven and sbt based projects as well as arbitrary shell scripts and Windows batch commands. The creator of Jenkins is Kohsuke Kawaguchi. Released under the MIT License, Jenkins is free software."
+        },
+        {
+            "title": "React",
+            "url": "https://facebook.github.io/react",
+            "width": 1,
+            "image": "/assets/images/react.png",
+            "content": "React (sometimes styled React.js or ReactJS) is an open-source JavaScript framework for building user interfaces. It is maintained by Facebook, Instagram and a community of individual developers and corporations.\n\nAccording to JavaScript analytics service Libscore, React is currently being used on the websites of Netflix, Imgur, Bleacher Report, Feedly, Airbnb, SeatGeek, HelloSign, Walmart, Portfolio's, Paviljons Concept Store and others."
+        },
+        {
+            "title": "Bootstrap",
+            "url": "http://getbootstrap.com",
+            "width": 1,
+            "image": "/assets/images/bootstrap.png",
+            "content": "Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many web frameworks, it concerns itself with front-end development only."
+        },
+        {
+            "title": "Gulp.js",
+            "url": "http://gulpjs.com",
+            "width": 1,
+            "image": "/assets/images/gulp.png",
+            "content": "gulp.js is an open-source JavaScript toolkit by Fractal Innovations and the open source community at GitHub, used as a streaming build system in front-end web development.\n\nIt is a task runner built on Node.js and Node Package Manager (npm), used for automation of time-consuming and repetitive tasks involved in web development like minification, concatenation, cache busting, unit testing, linting, optimization etc."
+        },
+        {
+            "title": "Node.js",
+            "url": "https://nodejs.org",
+            "width": 1,
+            "image": "/assets/images/node.png",
+            "content": "Node.js is an open-source, cross-platform JavaScript runtime environment for developing a diverse variety of server tools and applications.\n\nAlthough Node.js is not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript. The runtime environment interprets JavaScript using Google's V8 JavaScript engine."
+        },
+        {
+            "title": "PHPUnit",
+            "url": "https://phpunit.de",
+            "width": 1,
+            "image": "/assets/images/phpunit.png",
+            "content": "PHPUnit is a unit testing framework for the PHP programming language. It is an instance of the xUnit architecture for unit testing frameworks that originated with SUnit and became popular with JUnit. PHPUnit was created by Sebastian Bergmann and its development is hosted on GitHub."
+        },
+        {
+            "title": "MySQL",
+            "url": "https://www.mysql.com",
+            "width": 1,
+            "image": "/assets/images/mysql.png",
+            "content": "MySQL is an open-source relational database management system (RDBMS). Its name is a combination of \"My\", the name of co-founder Michael Widenius' daughter, and \"SQL\", the abbreviation for Structured Query Language.\n\nThe MySQL development project has made its source code available under the terms of the GNU General Public License, as well as under a variety of proprietary agreements. MySQL was owned and sponsored by a single for-profit firm, the Swedish company MySQL AB, now owned by Oracle Corporation. For proprietary use, several paid editions are available, and offer additional functionality."
+        },
+        {
+            "title": "HTML",
+            "url": "https://www.w3.org/TR/html5",
+            "width": 1,
+            "image": "/assets/images/html.png",
+            "content": "HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard.\n\nIt was published in October 2014 by the World Wide Web Consortium (W3C) to improve the language with support for the latest multimedia, while keeping it both easily readable by humans and consistently understood by computers and devices such as web browsers, parsers, etc. HTML5 is intended to subsume not only HTML 4, but also XHTML 1 and DOM Level 2 HTML."
+        },
+        {
+            "title": "Apache2",
+            "url": "https://httpd.apache.org",
+            "width": 1,
+            "image": "/assets/images/apache.png",
+            "content": "The Apache HTTP Server is the world's most used web server software. Originally based on the NCSA HTTPd server, development of Apache began in early 1995 after work on the NCSA code stalled.\n\nApache played a key role in the initial growth of the World Wide Web, quickly overtaking NCSA HTTPd as the dominant HTTP server, and has remained most popular since April 1996. In 2009, it became the first web server software to serve more than 100 million websites."
+        },
+        {
+            "title": "XML",
+            "url": "https://www.w3.org/XML",
+            "width": 1,
+            "image": "/assets/images/xml.png",
+            "content": "Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The W3C's XML 1.0 Specification and several other related specifications—all of them free open standards—define XML.\n\nThe design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services."
+        },
+        {
+            "title": "Debian",
+            "url": "https://www.debian.org",
+            "width": 1,
+            "image": "/assets/images/debian.png",
+            "content": "Debian is a Unix-like computer operating system that is composed entirely of free software, most of which is under the GNU General Public License and packaged by a group of individuals participating in the Debian Project.\n\nThe Debian Project was first announced in 1993 by Ian Murdock, Debian 0.01 was released on September 15, 1993, and the first stable release was made in 1996."
+        },
+        {
+            "title": "JSON",
+            "url": "http://www.json.org",
+            "width": 1,
+            "image": "/assets/images/json.png",
+            "content": "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs. It is the most common data format used for asynchronous browser/server communication, largely replacing XML, and is used by AJAX."
+        },
+        {
+            "title": "NPM",
+            "url": "https://www.npmjs.com",
+            "width": 1,
+            "image": "/assets/images/npm.png",
+            "content": "npm is the default package manager for the JavaScript runtime environment Node.js.\n\nnpm is written entirely in JavaScript and was developed by Isaac Z. Schlueter as a result of having \"seen module packaging done terribly\" and with inspiration from the shortcomings of other similar projects such as PHP (PEAR) and Perl (CPAN)."
+        },
+        {
+            "title": "Composer",
+            "url": "https://getcomposer.org",
+            "width": 1,
+            "image": "/assets/images/composer.png",
+            "content": "Composer is an application-level package manager for the PHP programming language that provides a standard format for managing dependencies of PHP software and required libraries.\n\nIt was developed by Nils Adermann and Jordi Boggiano, who continue to manage the project. They began development in April 2011 and first released it on March 1, 2012. Composer is strongly inspired by Node.js's \"npm\" and Ruby's \"bundler\". The project's dependency solving algorithm started out as a PHP-based port of openSUSE's libzypp satsolver."
+        },
+        {
+            "title": "GIT",
+            "url": "https://git-scm.com",
+            "width": 1,
+            "image": "/assets/images/git.png",
+            "content": "Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.\n\nGit was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano."
+        },
+        {
+            "title": "SVN",
+            "url": "https://subversion.apache.org",
+            "width": 1,
+            "image": "/assets/images/svn.png",
+            "content": "Apache Subversion (often abbreviated SVN, after its command name svn) is a software versioning and revision control system distributed as open source under the Apache License. Software developers use Subversion to maintain current and historical versions of files such as source code, web pages, and documentation. Its goal is to be a mostly compatible successor to the widely used Concurrent Versions System (CVS).\n\nThe open source community has used Subversion widely: for example in projects such as Apache Software Foundation, Free Pascal, FreeBSD, GCC, Mono and SourceForge. CodePlex offers access to Subversion as well as to other types of clients."
+        }
+    ]
+}

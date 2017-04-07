@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/assets/css/skills.css">
+
+<div id="skillsWrapper" ref="grid" class="grid">
+    <div class="gutter-sizer"></div>
+    <div class="grid-sizer"></div>
+
+    <div class="grid-item grid-item--width2 grid-item--header" style="background-color: #ffaeae;">
+
+        <div class="grid-item-header">
+            <h2>Good day to you!</h2>
+        </div>
+
+        <a href="#toggleFocus">
+            <object type="image/svg+xml" data="/assets/images/avatar.svg" class="logo header-image">
+
+            </object>
+        </a>
+
+        <p>
+            Welcome to the skills page. Below is a list of technologies that I have worked with, coded in, deployed onto and generally wrestled with. These range from operating systems to programming languages and version control systems to frameworks.
+        </p>
+        
+        <p>
+            I've been developing software since I was 14, a childhood fascination that's bloomed into a fully fledged career. The love for building things is a bright light in my life that has not dimmed as I have grown up. You can see this by hovering over or tapping my face on the left.
+        </p>
+        
+        <p>
+            I love working with new technology, if there is something you're interested in but it's not on the list please let me know, I love to learn too.
+        </p>
+
+    </div>
+
+    <div
+        v-for="(item, itemIndex) in items"
+        class="grid-item"
+        :class="'grid-item--width' + item.width"
+        :style="{ backgroundColor: getColour(itemIndex) }">
+
+        <div class="grid-item-header">
+            <span class="grid-item-header-url">
+                <a :href="item.url" target="_blank">{{ item.url }}</a>
+            </span>
+            <a @click.prevent="toggleItemFocus($event, itemIndex)" class="zoom-toggle" href="#toggleFocus">                                
+                <h2 >{{ item.title }}</h2>
+            </a>
+
+        </div>
+
+        <a @click.prevent="toggleItemFocus($event, itemIndex)" class="zoom-toggle" href="#toggleFocus">                                
+            <img class="header-image" :src="item.image" :alt="item.title" />
+        </a>
+
+        <p>
+            <template v-for="line in item.content.split('\n')">{{line}}<br></template>
+        </p>
+
+    </div>
+</div>
+
+<script src="/assets/js/skills/skills.js"></script>

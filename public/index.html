@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>You Only Code Once Ltd</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/master.css">
+    </head>
+    <body>
+        <header id="header">
+            <nav class="navigation">
+                <div class="header-background"></div>
+                <div class="container">
+                    <a href="/" @click.prevent="setActiveMenu(0)">
+                        <img src="/assets/images/logo.png" alt="logo">
+                    </a>
+                    <div class="navigation-menu">
+                        <div @click.prevent="toggleOpenMenu" :class="{ open: open }"class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul id="navigation_content" :class="{ open: open }">
+                          <li v-for="(link, linkIndex) in links" :class="{ on: activeMenu === linkIndex }">
+                                <a @click.prevent="setActiveMenu(linkIndex)" :href="link.url">{{ link.name }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="content">
+            <div class="content-container container">
+                
+            </div>
+        </div>
+        
+        <div class="back-to-top"></div>
+        
+        <div class="footer-push"></div>
+        <footer>
+            <div class="container">
+                <div class="footer-address">
+                    <p>
+                        You Only Code Once Ltd is a company registered in England and Wales. Registered number: 10687898. Registered office: 7 Holyrood Court, Marlborough Road, Watford, Herts, United Kingdom, WD18 0QX.
+                    </p>
+                </div><div class="footer-copyright">
+                    Copyright &copy; You Only Code Once Ltd 2017
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+        <script src="/assets/js/master.js"></script>
+        
+        
+    </body>
+</html>
