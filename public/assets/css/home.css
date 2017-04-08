@@ -1230,7 +1230,8 @@ footer .footer-address {
       margin-top: 10px; } }
 
 .project-list .project-list-item {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 0.3rem; }
   .project-list .project-list-item.project-list-item--github {
     background-image: url("../images/github-mark-32px.png");
     background-repeat: no-repeat;
