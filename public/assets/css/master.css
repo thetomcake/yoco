@@ -905,22 +905,36 @@ th {
 
 button, a.button {
   background-color: #666;
-  border: solid 1px #333;
-  color: #fff; }
+  border: solid 2px #333;
+  color: #ddd; }
   button.button-primary, a.button.button-primary {
     background-color: #E04856;
     border: solid 2px #333;
     color: #333; }
     button.button-primary:hover, button.button-primary:focus, a.button.button-primary:hover, a.button.button-primary:focus {
       color: #000;
-      font-weight: bold;
       border: solid 2px #333;
       background-color: #dc3242; }
   button:hover, button:focus, a.button:hover, a.button:focus {
     text-decoration: none;
     color: #fff;
-    border: solid 1px #333;
-    background-color: #444; }
+    border: solid 2px #333;
+    background-color: #444;
+    font-weight: bold; }
+  button.button-green, a.button.button-green {
+    background-color: #1b6731; }
+    button.button-green:hover, button.button-green:focus, a.button.button-green:hover, a.button.button-green:focus {
+      color: #fff;
+      background-color: #165327; }
+
+@media print {
+  body * {
+    display: none !important; }
+  body:after {
+    padding: 50px;
+    display: block;
+    text-align: center;
+    content: "Sorry print mode styling sucks, so i just disabled it. Who really wants to print this?"; } }
 
 html {
   height: 100%; }

@@ -1,0 +1,12 @@
+@media print {
+    body * {
+        display: none !important;
+    }
+
+    body:after {
+        padding: 50px;
+        display: block;
+        text-align: center;
+        content: "Sorry print mode styling sucks, so i just disabled it. Who really wants to print this?";
+    }
+}

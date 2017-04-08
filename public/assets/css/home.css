@@ -905,22 +905,36 @@ th {
 
 button, a.button {
   background-color: #666;
-  border: solid 1px #333;
-  color: #fff; }
+  border: solid 2px #333;
+  color: #ddd; }
   button.button-primary, a.button.button-primary {
     background-color: #E04856;
     border: solid 2px #333;
     color: #333; }
     button.button-primary:hover, button.button-primary:focus, a.button.button-primary:hover, a.button.button-primary:focus {
       color: #000;
-      font-weight: bold;
       border: solid 2px #333;
       background-color: #dc3242; }
   button:hover, button:focus, a.button:hover, a.button:focus {
     text-decoration: none;
     color: #fff;
-    border: solid 1px #333;
-    background-color: #444; }
+    border: solid 2px #333;
+    background-color: #444;
+    font-weight: bold; }
+  button.button-green, a.button.button-green {
+    background-color: #1b6731; }
+    button.button-green:hover, button.button-green:focus, a.button.button-green:hover, a.button.button-green:focus {
+      color: #fff;
+      background-color: #165327; }
+
+@media print {
+  body * {
+    display: none !important; }
+  body:after {
+    padding: 50px;
+    display: block;
+    text-align: center;
+    content: "Sorry print mode styling sucks, so i just disabled it. Who really wants to print this?"; } }
 
 html {
   height: 100%; }
@@ -1098,43 +1112,47 @@ footer .footer-address {
   box-sizing: border-box; }
 
 @media screen and (max-width: 767px) {
-  .grid-item.grid-item--width2 img.header-image {
+  .grid-item.grid-item--width2 .header-image {
     width: 85%;
     margin-left: 7.5%;
     -moz-transition: -moz-transform,-webkit-transform,transform 1.2s;
     -webkit-transition: -moz-transform,-webkit-transform,transform 1.2s;
     transition: -moz-transform,-webkit-transform,transform 1.2s; }
-    .grid-item.grid-item--width2 img.header-image:hover {
+    .grid-item.grid-item--width2 .header-image:hover {
       -moz-transform: scale(1.1);
       -webkit-transform: scale(1.1);
       transform: scale(1.1); }
-  .grid-item.grid-item--width2 p {
+  .grid-item.grid-item--width2 p, .grid-item.grid-item--width2 ul {
     margin: 15px 0 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
     max-height: px; }
+    .grid-item.grid-item--width2 p a, .grid-item.grid-item--width2 ul a {
+      text-decoration: underline; }
   .grid-item.grid-item--width2 .grid-item-header h2 {
     margin: 0 0 15px 0; } }
 
 @media screen and (min-width: 768px) {
   .grid-item.grid-item--width2 {
     width: 100%; }
-    .grid-item.grid-item--width2 img.header-image, .grid-item.grid-item--width2 object.header-image {
+    .grid-item.grid-item--width2 .header-image {
       width: 50%;
       margin-top: -38px;
       float: left; }
-    .grid-item.grid-item--width2 p, .grid-item.grid-item--width2 h2 {
+    .grid-item.grid-item--width2 p, .grid-item.grid-item--width2 h2, .grid-item.grid-item--width2 ul {
       box-sizing: border-box;
       padding-left: 15px; }
-    .grid-item.grid-item--width2 p {
+    .grid-item.grid-item--width2 p, .grid-item.grid-item--width2 ul {
       float: right;
       width: 50%;
       margin: 15px 0 0 0; }
+      .grid-item.grid-item--width2 p a, .grid-item.grid-item--width2 ul a {
+        text-decoration: underline; }
     .grid-item.grid-item--width2 .grid-item-header h2 {
       margin: 0 0 15px 50%; }
   .grid-item.grid-item--header {
     width: 100%; }
-    .grid-item.grid-item--header img.header-image, .grid-item.grid-item--header object.header-image {
+    .grid-item.grid-item--header .header-image {
       width: 20%;
       height: 250px;
       margin-top: -38px;
@@ -1142,7 +1160,7 @@ footer .footer-address {
     .grid-item.grid-item--header p, .grid-item.grid-item--header h2 {
       box-sizing: border-box;
       padding-left: 15px; }
-    .grid-item.grid-item--header p {
+    .grid-item.grid-item--header p, .grid-item.grid-item--header ul {
       float: right;
       width: 80%;
       margin: 15px 0 0 0; }
@@ -1162,22 +1180,21 @@ footer .footer-address {
   .grid-item .zoom-toggle {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in; }
-  .grid-item.grid-item--width1 img.header-image {
+  .grid-item.grid-item--width1 .header-image {
     -moz-transition: -moz-transform,-webkit-transform,transform 1.2s;
     -webkit-transition: -moz-transform,-webkit-transform,transform 1.2s;
     transition: -moz-transform,-webkit-transform,transform 1.2s; }
-    .grid-item.grid-item--width1 img.header-image:hover {
+    .grid-item.grid-item--width1 .header-image:hover {
       -moz-transform: scale(1.1);
       -webkit-transform: scale(1.1);
       transform: scale(1.1); }
-  .grid-item.grid-item--width1 img.header-image, .grid-item.grid-item--width1 object.header-image {
+  .grid-item.grid-item--width1 .header-image {
     width: 85%;
     margin-left: 7.5%; }
   .grid-item.grid-item--width1 p {
     margin: 15px 0 0 0;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: px; }
+    text-overflow: ellipsis; }
   .grid-item.grid-item--width1 .grid-item-header h2 {
     margin: 0 0 15px 0; }
 
@@ -1205,11 +1222,17 @@ footer .footer-address {
 .grid-item a.button {
   margin-bottom: 0;
   float: right; }
+  @media screen and (min-width: 768px) {
+    .grid-item a.button {
+      margin-top: -37px; } }
+  @media screen and (max-width: 767px) {
+    .grid-item a.button {
+      margin-top: 10px; } }
 
-@media screen and (min-width: 768px) {
-  .grid-item a.button {
-    margin-top: -37px; } }
-
-@media screen and (max-width: 767px) {
-  .grid-item a.button {
-    margin-top: 10px; } }
+.project-list .project-list-item {
+  list-style-type: none; }
+  .project-list .project-list-item.project-list-item--github {
+    background-image: url("../images/github-mark-32px.png");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    padding-left: 32px; }

@@ -1,7 +1,7 @@
 button, a.button {
     background-color: #666;
-    border: solid 1px #333;
-    color: #fff;
+    border: solid 2px #333;
+    color: #ddd;
     
     &.button-primary {
         background-color: #E04856;
@@ -9,7 +9,6 @@ button, a.button {
         color: #333;
         &:hover, &:focus {
             color: #000;
-            font-weight: bold;
             border: solid 2px #333;
             background-color: darken(#E04856, 5%);
         }
@@ -18,9 +17,19 @@ button, a.button {
     &:hover, &:focus {
         text-decoration: none;
         color: #fff;
-        border: solid 1px #333;
+        border: solid 2px #333;
         background-color: #444;
+        font-weight: bold;
     }
+    
+    &.button-green {
+        background-color: #1b6731;
+        &:hover, &:focus {
+            color: #fff;
+            background-color: darken(#1b6731, 5%);
+        }
+    }
+    
     
 }
 

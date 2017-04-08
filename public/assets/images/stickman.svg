@@ -80,7 +80,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1130648"
-     inkscape:cx="88.795289"
+     inkscape:cx="272.19129"
      inkscape:cy="380.82563"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -160,15 +160,15 @@
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:14.89999962;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 640,638.88981 0,-208.57143 -78.57143,0 42.85715,-137.14286 82.85714,0 35.71428,135.71428 -84.28571,1.42858"
+       d="m 610.35213,637.09297 0,-208.57143 -78.57143,0 42.85715,-137.14286 82.85714,0 35.71428,135.71428 -84.28571,1.42858"
        id="path4215"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
     <ellipse
        style="fill:#000000;stroke-width:14.89999962;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="path4219"
-       cx="637.85718"
-       cy="635.31836"
+       cx="609.10773"
+       cy="633.52155"
        rx="49.285713"
        ry="20.714285" />
     <path

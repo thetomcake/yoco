@@ -5,7 +5,7 @@
 @media screen and (max-width: 767px) {
     .grid-item {
         &.grid-item--width2 {
-            img.header-image {
+            .header-image {
                 width: 85%;
                 margin-left: 7.5%;
                 -moz-transition: -moz-transform,-webkit-transform,transform 1.2s;
@@ -20,11 +20,14 @@
 
             }
 
-            p {
+            p, ul {
                 margin: 15px 0 0 0;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 max-height: px;
+                a {
+                    text-decoration: underline;
+                }
             }
 
             .grid-item-header h2 {
@@ -40,7 +43,7 @@
         &.grid-item--width2 {
             width: 100%;
 
-            img.header-image, object.header-image {
+            .header-image {
                 width: 50%;
                 margin-top: -38px;
                 float: left;
@@ -50,15 +53,18 @@
                 
             }
 
-            p, h2 {
+            p, h2, ul {
                 box-sizing: border-box;
                 padding-left: 15px;
             }
 
-            p {
+            p, ul {
                 float: right;
                 width: 50%;
                 margin: 15px 0 0 0;
+                a {
+                    text-decoration: underline;
+                }
             }
 
             .grid-item-header h2 {
@@ -68,7 +74,7 @@
         &.grid-item--header {
             width: 100%;
 
-            img.header-image, object.header-image {
+            .header-image {
                 width: 20%;
                 height: 250px;
                 margin-top: -38px;
@@ -81,7 +87,7 @@
                 padding-left: 15px;
             }
 
-            p {
+            p, ul {
                 float: right;
                 width: 80%;
                 margin: 15px 0 0 0;
@@ -118,7 +124,7 @@
     }
     
     &.grid-item--width1 {
-        img.header-image {
+        .header-image {
             -moz-transition: -moz-transform,-webkit-transform,transform 1.2s;
             -webkit-transition: -moz-transform,-webkit-transform,transform 1.2s;
             transition: -moz-transform,-webkit-transform,transform 1.2s;
@@ -133,7 +139,7 @@
     }
        
     &.grid-item--width1 {
-        img.header-image, object.header-image {
+        .header-image {
             width: 85%;
             margin-left: 7.5%;
         }
@@ -141,7 +147,6 @@
             margin: 15px 0 0 0;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-height: px;
         }
 
         .grid-item-header h2 {

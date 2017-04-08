@@ -1,0 +1,15 @@
+.project-list {
+    
+    .project-list-item {
+        list-style-type: none;
+        
+        &.project-list-item--github {
+            background-image: url('../images/github-mark-32px.png');
+            background-repeat: no-repeat;
+            background-size: 22px;
+            padding-left: 32px;
+        }
+        
+    }
+    
+}
