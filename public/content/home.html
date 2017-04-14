@@ -1,73 +1,67 @@
 <link rel="stylesheet" href="/assets/css/home.css">
 
-<div class="grid">
-    <div class="grid-item grid-item--width2 grid-item--header" style="background-color: #ffaeae;">
-
-        <div class="grid-item-header">
-            <h2>Ahoy There!</h2>
-        </div>
-
-        <a href="#toggleFocus">
-            <object type="image/svg+xml" data="/assets/images/avatar.svg" class="logo header-image"></object>
-        </a>
-
-        <p>
-            Hello there! My name is Tom and welcome to You Only Code Once.
-        </p>
-        <p>
-            I am a freelance Full Stack Web Developer, specialising in <strong>PHP (Laravel)</strong>, <strong>VueJS</strong>, <strong>PostgreSQL</strong> and <strong>Linux</strong>.
-        </p>
-        <p>
-            Check out my skills on the <a href="/skills" data-internal>skills page</a>
-        </p>
+<div class="header-image-wrapper">
+    <img class="header-image" src="/assets/images/home/header_image.png" alt="Header Image" />
+    
+    <div class="header-text-wrapper">
         
-        <div class="clearfix"></div>
-        <a class="button button-primary" href="/skills" data-internal>
-            Skills
-        </a>
-        <div class="clearfix"></div>
+    <div class="header-text-header">The names Tom. Just Tom.</div>
+        <div class="header-text">
+            <p>
+                Welcome to You Only Code Once.
+            </p>
+            <p>
+                I am a freelance Full Stack Web Developer, specialising in PHP (Laravel), VueJS, PostgreSQL and Linux.
+            </p>
+            <p>
+                <a class="button button-primary" href="/skills" target="_blank" data-internal>
+                    Skills
+                </a>
+            </p>
+        </div>
     </div>
     
-    <div class="grid-item grid-item--width2 grid-item--header" style="background-color: #56B270;">
-
-        <div class="grid-item-header">
-            <h2>What have I done?</h2>
-        </div>
-
-        <a href="#toggleFocus">
-            <object type="image/svg+xml" style="" data="/assets/images/stickman.svg" class="logo header-image"></object>
-        </a>
-
-        <p>
-            Sadly most of the work I do is closed source proprietary software. I did however make this <strong>jazzy</strong> animated SVG you can see!
-        </p>
-        <p>
-            On a serious note, everything on the skills page is there with reason. I once did a Perl script and some Go and some Lua but I'm not counting that. Everything on the <a href="/skills" data-internal>skills page</a> can be backed up and I am more than happy to talk to you for hours about it.
-        <p>
-            I have listed some of the open source work I've managed to create below, starting with this website.
-        </p>
-        
-        <ul class="project-list">
-            <li class="project-list-item project-list-item--github">
-                <a href="https://github.com/thetomcake/yoco" target="_blank">You Only Code Once (this website)</a>
-            </li>
-            <li class="project-list-item project-list-item--github">
-                <a href="https://github.com/thetomcake/serviceworkers" target="_blank">Service Workers POC</a>
-            </li>
-            <li class="project-list-item project-list-item--github">
-                <a href="https://github.com/thetomcake/websiteunderconstruction" target="_blank">Website Under Construction Creator POC</a>
-            </li>
-            <li class="project-list-item project-list-item--github">
-                <a href="https://github.com/digitalmarmalade/laravel-shop/tree/dev" target="_blank">Laravel Shop Fork</a>
-            </li>
-        </ul>
-        
-        <div class="clearfix"></div>
-        <a class="button button-green" href="https://github.com/thetomcake" target="_blank">
-            Github
-        </a>
-        <div class="clearfix"></div>
+    <div class="header-avatar-wrapper">
+        <object type="image/svg+xml" data="/assets/images/avatar.svg" class="header-avatar"></object>
     </div>
-    
 </div>
+
+<div class="home-content">
+    <div class="home-top-message">
+        That's all very well, but what have you actually done Tom?
+    </div>
+    <div class="row">
+        <div class="one-half column">
+            <p>
+                Sadly most of the work I do is closed source proprietary software.
+            </p>
+            <p>
+                Everything on the <a href="/skills" data-internal>skills</a> page is there with reason. I once did a Perl script and some Go and some Lua but I'm not counting that. Everything on the <a href="/skills" data-internal>skills page</a> can be backed up and I am more than happy to talk to you for hours about it.
+            <p>
+                I have listed some of the open source work I've managed to create below, starting with this website.
+            </p>
+        </div>
+        <div class="one-half column">
+            <ul class="project-list">
+                <li class="project-list-item project-list-item--github">
+                    <a href="https://github.com/thetomcake/yoco" target="_blank">You Only Code Once (this website)</a>
+                </li>
+                <li class="project-list-item project-list-item--github">
+                    <a href="https://github.com/thetomcake/serviceworkers" target="_blank">Service Workers POC</a>
+                </li>
+                <li class="project-list-item project-list-item--github">
+                    <a href="https://github.com/thetomcake/websiteunderconstruction" target="_blank">Website Under Construction Creator POC</a>
+                </li>
+                <li class="project-list-item project-list-item--github">
+                    <a href="https://github.com/digitalmarmalade/laravel-shop/tree/dev" target="_blank">Laravel Shop Fork</a>
+                </li>
+            </ul>
+            
+            <a class="button button-green" href="https://github.com/thetomcake" target="_blank">
+                Me On Github
+            </a>
+        </div>
+    </div>
+</div>
+
 <script src="/assets/js/home/home.js"></script>

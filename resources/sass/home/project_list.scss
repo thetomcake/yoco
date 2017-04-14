@@ -2,13 +2,21 @@
     
     .project-list-item {
         list-style-type: none;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
+        background-color: $brand-white;
+        padding: 7px;
+        border-radius: $border-radius;
         
         &.project-list-item--github {
             background-image: url('../images/github-mark-32px.png');
             background-repeat: no-repeat;
             background-size: 22px;
-            padding-left: 32px;
+            padding-left: 36px;
+            background-position: 7px;
+        }
+        
+        a {
+            color: $brand-grey;
         }
         
     }

@@ -5,7 +5,7 @@ new Vue({
         animating: false,
         open: false,
         links: [
-            {name: 'Home', 'content': '/content/home.html', 'url': '/'},
+            {name: 'Me', 'content': '/content/home.html', 'url': '/'},
             {name: 'Skills', 'content': '/content/skills.html', 'url': '/skills'},
         ],
         backToTopButton: $('.back-to-top')
@@ -85,7 +85,6 @@ new Vue({
                     this.slideContentRight(this.links[activeMenu].content);
                 }
                 this.activeMenu = activeMenu;
-                this.open = false;
                 window.history.pushState({}, "", this.links[activeMenu].url);
             }
         },

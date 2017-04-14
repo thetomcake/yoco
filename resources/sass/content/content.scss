@@ -1,54 +1,85 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Muli:400,700|Raleway:400,700|Roboto:400,700');
 @import "burger.scss";
 @import "content_sliding.scss";
 @import "buttons.scss";
 @import "print.scss";
+@import "blocks.scss";
+
+$header-height: 60px;
+$header-height-mobile: 45px;
 
 html {
     height: 100%;
 }
 
-body {
-    min-height: 100%;
-    position: relative;
-}
 
 html, body {
     padding: 0;
     margin: 0;
-    color: #333;
-    min-width: 360px;
+    color: $text-primary;;
+    min-width: 320px;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: $text-primary;
 }
 a:hover {
     text-decoration: underline;
-    color: #333;
+    color: $text-primary;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
     background-color: #333;
 }
 
 #content {
+    transition: background-color 0.3s;
     overflow: hidden;
     width: 100%;
 }
 
 
 header {
+    font-family: 'Roboto', sans-serif;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1;
-    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: $text-primary;
+    font-weight: 700;
+    position: relative;
+    
+    @media screen and (min-width: 700px) {
+        font-size: 24pt;
+    }
+    @media screen and (max-width: 699px) {
+        font-size: 16pt;
+    }
+    
+    .header-logo-wrapper {
+        float: left;
+        margin-top: 6px;
+    }
+    
+    .header-logo {
+        margin-top: 3px;
+        letter-spacing: -0.7px;
+        font-weight: 700;
+    }
     
     .header-background {
-        background-color: #e04856;
+        background-color: $brand-primary;
         width: 100%;
         position: absolute;
     }
@@ -68,14 +99,28 @@ header {
             float: right;
             
             .burger-icon {
-                margin-top: 18px;
+                @media screen and (min-width: 700px) {
+                    margin-top: 18px;
+                }
+                @media screen and (max-width: 699px) {
+                    margin-top: 11px;
+                }
             }
 
             ul {
-                padding-top: 18px;
                 list-style: none;
                 list-style-type: none;
                 margin: 0;
+                @media screen and (min-width: 700px) {
+                    margin-top: 6px;
+                }
+                @media screen and (max-width: 699px) {
+                    margin-top: 0px;
+                }
+                
+                li {
+
+                }
             }
         }
     }
@@ -98,7 +143,7 @@ header {
                     width: 100%;
                     padding-top: 0;
                     background-color: #222;
-                    border-bottom: solid 2px #e04856;
+                    border-bottom: solid 2px $brand-primary;
                     transition: all 0.4s;
                     -webkit-transition: all 0.4s;
                     -moz-transition: all 0.4s;
@@ -108,6 +153,9 @@ header {
                         border-bottom: solid 1px #333;
                         padding: 10px;
                         margin: 0;
+                        span {
+                            display: none;
+                        }
                         a {
                             color: #fff;
                             width: 100%;
@@ -117,7 +165,6 @@ header {
                             border-bottom: none;
                         }
                         &.on {
-                            background-color: #111;
                             font-weight: bold;
                         }
                     }
@@ -126,7 +173,14 @@ header {
                 }
                 ul.open  {
                     visibility: visible;
-                    top: 60px;
+                    
+                    @media screen and (min-width: 700px) {
+                        top: $header-height;
+                    }
+                    @media screen and (max-width: 699px) {
+                        top: $header-height-mobile;
+                    }
+                    
                     opacity: 1;
                 }
             }
@@ -137,15 +191,14 @@ header {
         .navigation {
             .navigation-menu {
                 ul {
-                    height: 60px;
+                    
                     li {
-                        font-size: 16px;
                         display: inline-block;
                         margin: 0 0 0 12px;
                         &.on {
-                            font-weight: bold;
-                            color: #000;
-                            text-decoration: underline;
+                            a {
+                                text-decoration: underline;
+                            }
                         }
                     }
 
@@ -160,8 +213,13 @@ header {
     
 }
 
-header, header img, header .header-background {
-    height: 60px;
+header, header .header-background {
+    @media screen and (min-width: 700px) {
+        height: $header-height;
+    }
+    @media screen and (max-width: 699px) {
+        height: $header-height-mobile;
+    }
 }
 
 .back-to-top {
@@ -200,7 +258,7 @@ header, header img, header .header-background {
 
 
 .footer-push {
-    height: 155px;
+    height: 145px;
 }
 
 footer {
@@ -216,29 +274,19 @@ footer {
     
     padding: 20px 0;
     
-    background-color: #555;
-    border-top: solid 5px #E04856;
+    background-color: $footer-background;
 }
 
-footer .footer-copyright, footer .footer-address {
-    display: inline-block;
-    vertical-align: top;
-    
-    p {
-        margin-bottom: 0;
+@media screen and (min-width: 550px) {
+    .footer-copyright {
+        text-align: right;
     }
 }
 
-footer .footer-copyright {
-    text-align: right;
-    width: 50%;
-    min-width: 100px;
-    padding-left: 20px;
-    box-sizing: border-box;
-}
-footer .footer-address {
-    width: 50%;
-    min-width: 150px;
+@media screen and (max-width: 449px) {
+    .footer-copyright {
+        margin-top: 1rem;
+    }
 }
 
 .clearfix {

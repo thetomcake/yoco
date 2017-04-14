@@ -11,9 +11,11 @@
             <nav class="navigation">
                 <div class="header-background"></div>
                 <div class="container">
-                    <a href="/" @click.prevent="setActiveMenu(0)">
-                        <img src="/assets/images/logo.png" alt="logo">
-                    </a>
+                    <div class="header-logo-wrapper">
+                        <a class="header-logo" href="/" @click.prevent="setActiveMenu(0)">
+                            You Only Code Once
+                        </a>
+                    </div>
                     <div class="navigation-menu">
                         <div @click.prevent="toggleOpenMenu" :class="{ open: open }"class="burger-icon">
                             <span></span>
@@ -23,6 +25,7 @@
                         </div>
                         <ul id="navigation_content" :class="{ open: open }">
                           <li v-for="(link, linkIndex) in links" :class="{ on: activeMenu === linkIndex }">
+                                <span class="navigation-divider" v-if="linkIndex !== 0 && linkIndex < links.length"> | </span>
                                 <a @click.prevent="setActiveMenu(linkIndex)" :href="link.url">{{ link.name }}</a>
                             </li>
                         </ul>
@@ -42,12 +45,15 @@
         <div class="footer-push"></div>
         <footer>
             <div class="container">
-                <div class="footer-address">
-                    <p>
-                        You Only Code Once Ltd is a company registered in England and Wales. Registered number: 10687898. Registered office: 7 Holyrood Court, Marlborough Road, Watford, Herts, United Kingdom, WD18 0QX.
-                    </p>
-                </div><div class="footer-copyright">
-                    Copyright &copy; You Only Code Once Ltd 2017
+                <div class="row">
+                    <div class="footer-address one-half column">
+                        <p>
+                            You Only Code Once Ltd is a company registered in England and Wales. Registered number: 10687898. Registered office: 7 Holyrood Court, Marlborough Road, Watford, Herts, United Kingdom, WD18 0QX.
+                        </p>
+                    </div>
+                    <div class="footer-copyright one-half column">
+                        Copyright &copy; You Only Code Once Ltd 2017
+                    </div>
                 </div>
             </div>
         </footer>

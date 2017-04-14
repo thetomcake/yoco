@@ -5,7 +5,7 @@ new Vue({
         animating: false,
         open: false,
         links: [
-            {name: 'Home', 'content': '/content/home.html', 'url': '/'},
+            {name: 'Me', 'content': '/content/home.html', 'url': '/'},
             {name: 'Skills', 'content': '/content/skills.html', 'url': '/skills'},
         ],
         backToTopButton: $('.back-to-top')
