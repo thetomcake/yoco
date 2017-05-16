@@ -1,0 +1,22 @@
+.heading-text {
+    font-weight: $font-weight-header;
+    
+    @media screen and (min-width: 700px) {
+        font-size: 24pt;
+    }
+    @media screen and (max-width: 699px) {
+        font-size: 16pt;
+    }
+}
+
+.heading-text--centered {
+    text-align: center;
+}
+
+.heading-text--header {
+    margin: 35px auto;
+}
+
+.normal-text {
+    font-size: $font-size-normal;
+}

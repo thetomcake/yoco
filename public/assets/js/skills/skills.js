@@ -19,11 +19,17 @@ new Vue({
     data: {
         items: [],
         grid: null,
-        colours: ["#898CFF","#FF89B5","#FFDC89","#90D4F7","#71E096","#F5A26F","#668DE5","#ED6D79","#5AD0E5","#DA97E0","#CFF381","#FF96E3","#BB96FF","#67EEBD", "#E2FCEA", "#F3B9C5", "#E7D9D3", "#BBD7D1", "#BBD7D1", "#F6D9E0", "#CBBBC0", "#F5FADA", "#F5CFB9"],
+        colours: [],
+        initialColours: [
+            '#2d9cdb',
+            '#eb5757',
+            '#219653',
+            '#9b51e0',
+            '#f2994a'
+        ],
         transitionDuration: 300
     },
     mounted: function() {
-        this.colours = this.shuffleArray(this.colours);
         this.getContent().then(() => {
             Vue.nextTick(() => {
                 this.initMasonry();
@@ -31,6 +37,11 @@ new Vue({
         });
     },
     methods: {
+        fillColours: function(length) {
+            for (var i = 0; i < length; i++) {
+                this.colours.push(this.initialColours[i % this.initialColours.length]);
+            }
+        },
         initMasonry: function() {
             this.masonry = $(this.$refs.grid).masonry({
                 // options
@@ -51,6 +62,7 @@ new Vue({
                     url: '/content/content.json',
                     dataType: 'json'
                 }).done((response) => {
+                    this.fillColours(response.items.length);
                     this.items = this.shuffleArray(response.items);
                     success();
                 }).fail(() => {

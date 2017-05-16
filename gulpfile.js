@@ -46,6 +46,8 @@ gulp.task('scripts:watch', function () {
 });
 
 gulp.task('watch', function () {
+    gulp.start('scripts');
+    gulp.start('sass');
     gulp.start('scripts:watch');
     gulp.start('sass:watch');
 });

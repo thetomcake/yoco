@@ -893,11 +893,9 @@ th {
 .content-container {
   position: relative;
   left: 0px;
-  transition: all 0.3s;
-  transition-timing-function: ease-in-out;
+  transition: left 0.3s;
+  transition-timing-function: ease-out;
   opacity: 1; }
-  .content-container.slide-out-left, .content-container.slide-out-right {
-    opacity: 0; }
   .content-container.slide-out-left {
     left: -100%; }
   .content-container.slide-out-right {
@@ -936,6 +934,24 @@ button, .button {
 .background-primary {
   background-color: #EB5757; }
 
+.heading-text {
+  font-weight: 700; }
+  @media screen and (min-width: 700px) {
+    .heading-text {
+      font-size: 24pt; } }
+  @media screen and (max-width: 699px) {
+    .heading-text {
+      font-size: 16pt; } }
+
+.heading-text--centered {
+  text-align: center; }
+
+.heading-text--header {
+  margin: 35px auto; }
+
+.normal-text {
+  font-size: 15px; }
+
 html {
   height: 100%; }
 
@@ -968,6 +984,12 @@ body {
   transition: background-color 0.3s;
   overflow: hidden;
   width: 100%; }
+  @media screen and (max-width: 699px) {
+    #content {
+      margin-top: 45px; } }
+  @media screen and (min-width: 700px) {
+    #content {
+      margin-top: 60px; } }
 
 header {
   font-family: 'Roboto', sans-serif;
@@ -978,13 +1000,8 @@ header {
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: 700;
-  position: relative; }
-  @media screen and (min-width: 700px) {
-    header {
-      font-size: 24pt; } }
-  @media screen and (max-width: 699px) {
-    header {
-      font-size: 16pt; } }
+  position: fixed;
+  width: 100%; }
   header .header-logo-wrapper {
     float: left;
     margin-top: 6px; }

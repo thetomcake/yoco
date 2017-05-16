@@ -8,6 +8,7 @@
     "gulp-rename": "*",
     "gulp-uglify": "*",
     "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "vue-resource": "^1.0.3",
+    "fullpage.js": "^2.9"
   }
 }

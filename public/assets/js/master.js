@@ -26,7 +26,7 @@ new Vue({
         });
         
         this.backToTopButton.on('click', () => {
-            $('body').animate({scrollTop: 0}, 400);
+            this.scrollToTop();
         });
                 
         $(window).on('scroll', (event) => {
@@ -43,6 +43,9 @@ new Vue({
         });
     },
     methods: {
+        scrollToTop: function(time) {
+            $('body').animate({scrollTop: 0}, time === undefined ? 400 : time);
+        },
         setInitialContent: function() {
             var activeMenu = 0;
             var contentPath = this.links[0].content;
@@ -89,15 +92,19 @@ new Vue({
             }
         },
         slideContentLeft: function(path) {
-            this.slideContent('slide-out-right', 'slide-out-left', path);
+            this.slideContent('slide-out-right', 'slide-out-left', 'sliding-out', path);
         },
         slideContentRight: function(path) {
-            this.slideContent('slide-out-left', 'slide-out-right', path);
+            this.slideContent('slide-out-left', 'slide-out-right', 'sliding-out', path);
         },
-        slideContent: function(slideOutClass, slideInClass, path) {
+        slideContent: function(slideOutClass, slideInClass, bodyClass, path) {
+            this.open = false;
             this.animating = true;
             var contentContainer = this.getContentContainer();
             var contentContainerClone = contentContainer.clone();
+            contentContainerClone
+                .addClass(slideInClass)
+                .appendTo('#content');
 
             contentContainer.addClass(slideOutClass);
             
@@ -105,23 +112,23 @@ new Vue({
             
             this.loadContent(path).then((response) => {
                 var endTime = Date.now();
+                contentContainerClone.html(response);
                 
-                var processContent = (content) => {
+                var removeOldContent = () => {
+                    this.scrollToTop(0);
                     contentContainer.remove();
-                    contentContainerClone.addClass(slideInClass).html(content).appendTo('#content');
+                    contentContainerClone.removeClass(slideInClass);
+                    
                     setTimeout(() => {
-                        contentContainerClone.removeClass(slideInClass);
-                        setTimeout(() => {
-                            this.animating = false;
-                        }, 300);
-                    }, 20);
+                        this.animating = false;
+                    }, 300);
                 };
                 
                 if (endTime - startTime > 300) {
-                    processContent(response);
+                    removeOldContent();
                 } else {
                     setTimeout(() => {
-                        processContent(response);
+                        removeOldContent();
                     }, 300 - (endTime - startTime));
                 }
                 

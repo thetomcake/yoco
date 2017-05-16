@@ -4,6 +4,7 @@
 @import "buttons.scss";
 @import "print.scss";
 @import "blocks.scss";
+@import "text.scss";
 
 $header-height: 60px;
 $header-height-mobile: 45px;
@@ -46,6 +47,13 @@ body {
     transition: background-color 0.3s;
     overflow: hidden;
     width: 100%;
+    
+    @media screen and (max-width: 699px) {
+        margin-top: $header-height-mobile;
+    }
+    @media screen and (min-width: 700px) {
+        margin-top: $header-height;
+    }
 }
 
 
@@ -58,14 +66,8 @@ header {
     text-transform: uppercase;
     color: $text-primary;
     font-weight: 700;
-    position: relative;
-    
-    @media screen and (min-width: 700px) {
-        font-size: 24pt;
-    }
-    @media screen and (max-width: 699px) {
-        font-size: 16pt;
-    }
+    position: fixed;
+    width: 100%;
     
     .header-logo-wrapper {
         float: left;

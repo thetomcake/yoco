@@ -1,4 +1,4 @@
-.home-content, .content-container, #content {
+.home-container {
     background-color: $brand-primary;
 }
 .home-content {
@@ -9,125 +9,57 @@
     }
 }
 
+.header-text-wrapper {
+    position: absolute;
+    left: 43%;
+    top: 0;
+    font-size: $font-size-normal;
+    height: 100%;
+}
+
 .header-image-wrapper {
+    
     position: relative;
-    
-    @media screen and (min-width: 700px) {
-        width: 150%;
-        left: -25%;
-    }
-    
-    @media screen and (max-width: 699) {
-        width: 100%;
-        left: 0%;
-    }
+    font-size: 0;
+    overflow: hidden;
     
     .header-image {
-        @media screen and (min-width: 700px) {
-            width: 100%;
-        }
-        @media screen and (max-width: 699px) {
-            height: 300px;
-            margin-left: -390px;
-        }
-        
         mix-blend-mode: multiply;
         background-color: $brand-primary-dark;
     }
     
-    .header-text-wrapper {
-        position: absolute;
-        transition: top 0.5s;
-        min-width: 0px;
-        
-        @media screen and (min-width: 900px) {
-            top: 17%;
-            left: 46%;
-            
-            .header-text {
-                max-width: 445px;
-            }
+    @media screen and (min-width: 900px) {
+        .header-image {
+            width: 100%;
         }
-        
-        @media screen and (min-width: 700px) and (max-width: 899px) {
-            top: 1%;
-            left: 46%;
-            
-            .header-text {
-                max-width: 390px;
-            }
-        }
-        
-        @media screen and (max-width: 699px) {
-            top: 5px;
-            left: 0px;
-            transition: top 0.5s;
-            padding-left: 75px;
-            min-width: 0;
-            
-            .header-text {
 
-            }
-        }
-        
-        .header-text-header {
-            font-size: $font-size-header;
-            
-            @media screen and (max-width: 699px) {
-                font-size: $font-size-header-mobile;
-            }
-            
-            font-weight: $font-weight-header;
-        }
-        .header-text {
-            p {
-                margin-bottom: 0.7rem;
-            }
-
-            .button {
-                margin-top: 20px;
-                @media screen and (max-width: 699px) {
-                    margin-top: 10px;
-                    z-index: 1;
-                    position: relative;
-                }
-            }
-        }
-    }
-    
-    
-    
-    @media screen and (min-width: 700px) {
-        .header-avatar-wrapper {
-            width: 24.5%;
-            position: absolute;
-            left: 19.5%;
+        .header-avatar {
+            position:absolute;
+            left:18.3%;
             bottom: 0px;
-
-            .header-avatar {
-
-            }
+            height: 100%;
         }
     }
     
-    @media screen and (max-width: 699px) {
-        .header-avatar-wrapper {
-            position: absolute;
-            left: -170px;
-            bottom: 0px;
+    @media screen and (max-width: 899px) {
+        .header-image {
+            transform: translateX(-30%);
+            height: 340px;
+        }
 
-            .header-avatar {
-                height: 300px;
-            }
+        .header-avatar {
+            position:absolute;
+            left: -135px;
+            bottom: 0px;
+            height: 100%;
         }
     }
+    
 }
 
 .home-top-message {
     position: relative;
     top: -7px;
     max-width: 460px;
-    font-weight: $font-weight-header;
-    font-size: $font-size-header;
     margin: 45px auto 25px auto;
 }
