@@ -11,6 +11,12 @@
   font-size: 15px;
   height: 100%; }
 
+.header-text-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 10px; }
+
 .header-image-wrapper {
   position: relative;
   font-size: 0;
