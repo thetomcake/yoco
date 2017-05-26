@@ -1,10 +1,9 @@
 .heading-text {
     font-weight: $font-weight-header;
-    
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 450px) {
         font-size: 24pt;
     }
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 449px) {
         font-size: 16pt;
     }
 }

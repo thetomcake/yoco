@@ -55,7 +55,7 @@ new Vue({
             });
         },
         getColour: function(itemIndex) {
-            return this.colours[itemIndex];
+            return this.colours[itemIndex % this.colours.length];
         },
         toggleItemFocus: function(event, itemIndex) {
             var gridItem = $(event.target).closest('.grid-item');

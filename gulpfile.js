@@ -25,20 +25,21 @@ var jsFiles = [
     './resources/js/skills/imagesloaded.pkgd.min.js',
     './resources/js/skills/skills.js'
 ];
-var jsDest = './public/assets/js/skills';
 
-gulp.task('scripts', function() {  
+gulp.task('scripts', function() {
     return gulp.src(jsFiles)
         .pipe(concat('skills.js'))
-        .pipe(gulp.dest(jsDest)) 
+        .pipe(gulp.dest('./public/assets/js'))
         
-    && gulp.src(['./resources/js/master.js'])
-        .pipe(concat('master.js'))
+    && gulp.src([
+            './resources/js/master.js',
+            './resources/js/utils/swipe.js'
+        ]).pipe(concat('master.js'))
         .pipe(gulp.dest('./public/assets/js'))
 
     && gulp.src(['./resources/js/home/home.js'])
         .pipe(concat('home.js'))
-        .pipe(gulp.dest('./public/assets/js/home'));
+        .pipe(gulp.dest('./public/assets/js'));
 });
 
 gulp.task('scripts:watch', function () {

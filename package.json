@@ -1,14 +1,15 @@
 {
   "private": true,
   "devDependencies": {
+    "fullpage.js": "^2.9",
     "gulp": "*",
     "gulp-bower": "*",
-    "gulp-sass": "*",
     "gulp-concat": "*",
     "gulp-rename": "*",
+    "gulp-requirejs": "^1.0.0-rc2",
+    "gulp-sass": "*",
     "gulp-uglify": "*",
     "vue": "^2.0.1",
-    "vue-resource": "^1.0.3",
-    "fullpage.js": "^2.9"
+    "vue-resource": "^1.0.3"
   }
 }

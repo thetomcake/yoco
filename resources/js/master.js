@@ -7,6 +7,7 @@ new Vue({
         links: [
             {name: 'Me', 'content': '/content/home.html', 'url': '/'},
             {name: 'Skills', 'content': '/content/skills.html', 'url': '/skills'},
+            {name: 'Contact', 'content': '/content/skills.html', 'url': '/contact'}
         ],
         backToTopButton: $('.back-to-top')
     },
@@ -40,6 +41,25 @@ new Vue({
                     .css('display', 'block')
                     .fadeTo(1000, 0.5);
             }
+        });
+        
+        window.addEventListener('popstate', (event) => {
+            this.links.forEach((link, linkIndex) => {
+                if (link.url === document.location.pathname) {
+                    event.preventDefault();
+                    this.setActiveMenu(linkIndex);
+                    return false;
+                }
+            });
+            this.setInitialContent();
+        });
+        
+        document.addEventListener('swiperight', (event) => {
+            this.setActiveMenu(this.activeMenu === 0 ? this.links.length - 1 : this.activeMenu - 1);
+        });
+        
+        document.addEventListener('swipeleft', (event) => {
+            this.setActiveMenu(this.activeMenu === this.links.length - 1 ? 0 : this.activeMenu + 1);
         });
     },
     methods: {
@@ -137,11 +157,39 @@ new Vue({
         },
         setContent: function(content) {
             this.getContentContainer().html(content);
+            this.addScriptAsset('/assets/js/home.js');
+            this.addCssAsset('/assets/css/home.css');
         },
         getContentContainer: function() {
             return $('.content-container');
+        },
+        getAssetContainer: function() {
+            return document.getElementById('pageAssets');
+        },
+        clearAssets: function() {
+            this.getAssetContainer().innerHTML = '';
+        },
+        addScriptAsset: function(path) {
+            var script = document.createElement('script');
+            script.setAttribute('async', true);
+            script.onload = () => {
+                alert("Script loaded and ready");
+            };
+            script.src = path;
+            this.getAssetContainer().appendChild(script);
+        },
+        addCssAsset: function(path) {
+            var script = document.createElement('link');
+            script.setAttribute('rel', 'stylesheet');
+            script.setAttribute('async', true);
+            script.onload = () => {
+                alert("stylesheet loaded and ready");
+            };
+            script.href = path;
+            this.getAssetContainer().appendChild(script);
+            
         }
     }
 });
 
-console.log('\'ere be debugging content! What brings you scoundrel to these parts?!')
+console.log('\'ere be debugging content! What brings you scoundrel to these parts?!');

@@ -1,5 +1,6 @@
 .home-container {
     background-color: $brand-primary;
+    height: 100%;
 }
 
 .home-content {
@@ -42,8 +43,8 @@
         }
 
         .header-avatar {
-            position:absolute;
-            left:18.3%;
+            position: absolute;
+            left: 18.3%;
             bottom: 0px;
             height: 100%;
         }
@@ -52,12 +53,12 @@
     @media screen and (max-width: 899px) {
         .header-image {
             transform: translateX(-30%);
-            height: 340px;
+            height: calc(100vh - #{$header-height});
         }
 
         .header-avatar {
             position:absolute;
-            left: -135px;
+            left: -41vh;
             bottom: 0px;
             height: 100%;
         }

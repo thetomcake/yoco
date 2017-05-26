@@ -936,10 +936,10 @@ button, .button {
 
 .heading-text {
   font-weight: 700; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 450px) {
     .heading-text {
       font-size: 24pt; } }
-  @media screen and (max-width: 699px) {
+  @media screen and (max-width: 449px) {
     .heading-text {
       font-size: 16pt; } }
 
@@ -983,13 +983,8 @@ body {
 #content {
   transition: background-color 0.3s;
   overflow: hidden;
-  width: 100%; }
-  @media screen and (max-width: 699px) {
-    #content {
-      margin-top: 45px; } }
-  @media screen and (min-width: 700px) {
-    #content {
-      margin-top: 60px; } }
+  width: 100%;
+  margin-top: 60px; }
 
 header {
   font-family: 'Roboto', sans-serif;
@@ -1001,10 +996,16 @@ header {
   color: #FFFFFF;
   font-weight: 700;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  /* Menu */ }
   header .header-logo-wrapper {
-    float: left;
-    margin-top: 6px; }
+    float: left; }
+    @media screen and (min-width: 450px) {
+      header .header-logo-wrapper {
+        margin-top: 6px; } }
+    @media screen and (max-width: 449px) {
+      header .header-logo-wrapper {
+        margin-top: 12px; } }
   header .header-logo {
     margin-top: 3px;
     letter-spacing: -0.7px;
@@ -1020,23 +1021,14 @@ header {
     z-index: 1; }
   header .navigation .navigation-menu {
     float: right; }
-    @media screen and (min-width: 700px) {
-      header .navigation .navigation-menu .burger-icon {
-        margin-top: 18px; } }
-    @media screen and (max-width: 699px) {
-      header .navigation .navigation-menu .burger-icon {
-        margin-top: 11px; } }
+    header .navigation .navigation-menu .burger-icon {
+      margin-top: 18px; }
     header .navigation .navigation-menu ul {
       list-style: none;
       list-style-type: none;
-      margin: 0; }
-      @media screen and (min-width: 700px) {
-        header .navigation .navigation-menu ul {
-          margin-top: 6px; } }
-      @media screen and (max-width: 699px) {
-        header .navigation .navigation-menu ul {
-          margin-top: 0px; } }
-  @media screen and (max-width: 767px) {
+      margin: 0;
+      margin-top: 6px; }
+  @media screen and (max-width: 899px) {
     header .navigation {
       z-index: 100;
       position: relative; }
@@ -1072,14 +1064,9 @@ header {
             font-weight: bold; }
       header .navigation .navigation-menu ul.open {
         visibility: visible;
+        top: 60px;
         opacity: 1; } }
-    @media screen and (max-width: 767px) and (min-width: 700px) {
-      header .navigation .navigation-menu ul.open {
-        top: 60px; } }
-    @media screen and (max-width: 767px) and (max-width: 699px) {
-      header .navigation .navigation-menu ul.open {
-        top: 45px; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     header .navigation .navigation-menu ul li {
       display: inline-block;
       margin: 0 0 0 12px; }
@@ -1088,13 +1075,8 @@ header {
     header .navigation .navigation-menu .burger-icon {
       display: none; } }
 
-@media screen and (min-width: 700px) {
-  header, header .header-background {
-    height: 60px; } }
-
-@media screen and (max-width: 699px) {
-  header, header .header-background {
-    height: 45px; } }
+header, header .header-background {
+  height: 60px; }
 
 .back-to-top {
   position: fixed;
@@ -1120,18 +1102,11 @@ header {
   .back-to-top:after {
     content: "^"; }
 
-.footer-push {
-  height: 145px; }
-
 footer {
+  width: 100%;
   height: 105px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   color: #fff;
   font-size: 8pt;
-  margin-top: 15px;
   padding: 20px 0;
   background-color: #250E0E; }
 

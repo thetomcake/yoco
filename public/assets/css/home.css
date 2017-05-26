@@ -1,5 +1,6 @@
 .home-container {
-  background-color: #EB5757; }
+  background-color: #EB5757;
+  height: 100%; }
 
 .home-content .row .column {
   padding: 15px; }
@@ -35,10 +36,10 @@
   @media screen and (max-width: 899px) {
     .header-image-wrapper .header-image {
       transform: translateX(-30%);
-      height: 340px; }
+      height: calc(100vh - 60px); }
     .header-image-wrapper .header-avatar {
       position: absolute;
-      left: -135px;
+      left: -41vh;
       bottom: 0px;
       height: 100%; } }
 
