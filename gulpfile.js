@@ -33,13 +33,18 @@ gulp.task('scripts', function() {
         
     && gulp.src([
             './resources/js/master.js',
-            './resources/js/utils/swipe.js'
+            './resources/js/utils/swipe.js',
+            './resources/js/utils/serviceworker.js'
         ]).pipe(concat('master.js'))
         .pipe(gulp.dest('./public/assets/js'))
 
     && gulp.src(['./resources/js/home/home.js'])
         .pipe(concat('home.js'))
-        .pipe(gulp.dest('./public/assets/js'));
+        .pipe(gulp.dest('./public/assets/js'))
+
+    && gulp.src(['./resources/js/serviceworker/serviceworker.js'])
+        .pipe(concat('serviceworker.js'))
+        .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('scripts:watch', function () {
