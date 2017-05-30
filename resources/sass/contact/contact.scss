@@ -1,0 +1,20 @@
+.bond, .contact-form-wrapper {
+    margin-bottom: 30px;
+}
+
+.bond {
+    width: 100%;
+}
+
+.g-recaptcha {
+    margin: 15px 0;
+}
+
+.success-message {
+    background-color: $brand-success;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $text-primary;
+    text-align: center;
+}

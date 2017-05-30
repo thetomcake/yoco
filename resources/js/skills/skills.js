@@ -20,6 +20,11 @@ new Vue({
             });
         });
     },
+    computed: {
+        loaded: function() {
+            return this.items.length ? true : false;
+        }
+    },
     methods: {
         fillColours: function(length) {
             for (var i = 0; i < length; i++) {

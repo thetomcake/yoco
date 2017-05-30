@@ -5,6 +5,7 @@
 @import "print.scss";
 @import "blocks.scss";
 @import "text.scss";
+@import "form.scss";
 
 html {
     height: 100%;
@@ -44,7 +45,12 @@ body {
     transition: background-color 0.3s;
     overflow: hidden;
     width: 100%;
-    margin-top: $header-height;
+    min-height: calc(100vh - (#{$header-height} + 145px));
+}
+
+#content, footer {
+    position: relative;
+    top: $header-height;
 }
 
 header {

@@ -6,8 +6,8 @@ new Vue({
         open: false,
         links: [
             {name: 'Me', 'content': '/content/home.html', 'url': '/', assetName: 'home'},
-            {name: 'Skills', 'content': '/content/skills.html', 'url': '/skills', assetName: 'skills'}
-//            {name: 'Contact', 'content': '/content/skills.html', 'url': '/contact', assetName: 'contact'}
+            {name: 'Skills', 'content': '/content/skills.html', 'url': '/skills', assetName: 'skills'},
+            {name: 'Contact', 'content': '/content/contact.html', 'url': '/contact', assetName: 'contact'}
         ],
         backToTopButton: $('.back-to-top')
     },
@@ -82,7 +82,8 @@ new Vue({
             
             this.activeMenu = activeMenu;
             this.loadContent(contentPath).then((content) => {
-                this.setContent(content, assetName);
+                this.setContent(content);
+                this.addAssets(assetName);
             });
         },
         toggleOpenMenu: function() {
@@ -134,13 +135,15 @@ new Vue({
             
             this.loadContent(path).then((response) => {
                 var endTime = Date.now();
-                this.setContent(response, assetName, contentContainerClone);
+                this.setContent(response, contentContainerClone);
                 
                 var removeOldContent = () => {
                     this.scrollToTop(0);
-                    contentContainer.remove();
-                    contentContainerClone.removeClass(slideInClass);
+                    this.clearAssets();
                     
+                    this.addAssets(assetName);
+                    contentContainerClone.removeClass(slideInClass);
+                    contentContainer.remove();
                     setTimeout(() => {
                         this.animating = false;
                     }, 300);
@@ -157,12 +160,9 @@ new Vue({
             });
            
         },
-        setContent: function(content, assetName, container) {
+        setContent: function(content, container) {
             container = (container === undefined ? this.getContentContainer() : container);
             container.html(content);
-            this.clearAssets();
-            this.addScriptAsset('/assets/js/' + assetName + '.js');
-            this.addCssAsset('/assets/css/' + assetName + '.css');
         },
         getContentContainer: function() {
             return $('.content-container');
@@ -172,6 +172,23 @@ new Vue({
         },
         clearAssets: function() {
             this.getAssetContainer().innerHTML = '';
+        },
+        addAssets: function(assetName) {
+            return new Promise((accept, reject) => {
+                var loaded = 0;
+                this.addScriptAsset('/assets/js/' + assetName + '.js').then(() => {
+                    loaded++;
+                    if (loaded === 2) {
+                        accept();
+                    }
+                });
+                this.addCssAsset('/assets/css/' + assetName + '.css').then(() => {
+                    loaded++;
+                    if (loaded === 2) {
+                        accept();
+                    }
+                });
+            });
         },
         addScriptAsset: function(path) {
             var script = document.createElement('script');
