@@ -1,3 +1,5 @@
+<script src='https://www.google.com/recaptcha/api.js?render=explicit' async defer></script>
+
 <div class="container" id="contactContainer">
     
     <h1 class="heading-text heading-text--centered heading-text--header">You Talkin' To Me?</h1>
@@ -22,7 +24,7 @@
                     <label for="exampleMessage">Message</label>
                     <textarea class="u-full-width" name="message" placeholder="Hi Tom..." id="messageInput" maxlength="700" required></textarea>
                     
-                    <div class="g-recaptcha" data-sitekey="6LcAUSMUAAAAADBxDgq3tfYFa85prLkF63NwwX76"></div>
+                    <div ref="captcha" class="g-recaptcha" data-sitekey="6LcAUSMUAAAAADBxDgq3tfYFa85prLkF63NwwX76"></div>
                     
                     <button class="button button-primary" v-attr="{ disabled: submitting }" type="submit">Submit</button>
                 </form>
@@ -36,5 +38,3 @@
     </div>
     
 </div>
-
-<script src='https://www.google.com/recaptcha/api.js' async defer></script>
